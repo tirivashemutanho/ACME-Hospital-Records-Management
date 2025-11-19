@@ -2,7 +2,7 @@
 
 This repository contains a simple PHP implementation of a hospital patient-record and billing system. It supports Outpatient, Inpatient, and Daycase patients. Each patient has a unique ID, name, age, and a list of consultations. Inpatients have extra attributes and the total bill calculation includes bed charges and procedures. Daycase patients are admitted and discharged the same day and have theatre fees.
 
-## Implemented classes (≥ 6)
+## Implemented classes 
 
 - `Patient` (abstract) — common properties: patientId, name, age, consultations; abstract method `getTotalBill()`.
 - `Consultation` — date, doctor's name, fee.
