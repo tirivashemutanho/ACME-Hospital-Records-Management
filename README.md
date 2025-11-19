@@ -14,7 +14,7 @@ This repository contains a simple PHP implementation of a hospital patient-recor
 - `Invoice` — produce invoice summary and total amount for a patient.
 - `Hospital` — manager class for patients and generating invoices.
 
-Additional domain/service classes introduced in the redesign:
+Additional domain/service classes introduced in the design:
 
 - `PatientRepository` — persist/load patient aggregates and associated consultations/procedures to SQLite.
 - `DB` — small database helper (SQLite PDO singleton) used by repositories.
@@ -123,24 +123,9 @@ php demo.php
 
 This will create sample Outpatient, Inpatient, and Daycase patients and print invoices.
 
-## Estimation
 
-Rough estimates for a minimal but robust implementation:
 
-- Scoping & design: 4-6 hours
-- Implement basic domain models & billing: 3-6 hours
-- CLI demo and unit tests: 2-4 hours
-- Persistence (DB models/migrations) + admin UI: 2-3 days
-- Authentication & role management (doctor, admin, billing): 1-2 days
-- Testing, performance tuning, and documentation: 1-2 days
-
-Total Minimal Viable Product (MVP): ~3-5 days for a single developer (assuming standard stack and small hospital). A more feature-complete solution with UI and full persistence: ~2-4 weeks depending on complexity.
-
-## Notes & Next Steps
-
-- This repository is a demo — data is in-memory. For production, add DB storage (ORM or raw SQL), authentication, and UI.
-- Add tests, validation, and stronger type checks for production use.
-- To enable the provided SQLite persistence and web UI, run the migration and start the PHP built-in server:
+## To run the app
 
 ```powershell
 php migrate.php
@@ -165,15 +150,4 @@ Workflows supported:
 - Admit/discharge inpatient
 - Generate/view invoice
 
-## Updated Estimation
 
-Small project tasks and rough estimates (single developer):
-
-- Add domain models & CLI demo: 4 hours
-- SQLite persistence & repository: 6 hours
-- Basic web UI (list/add/view): 8 hours
-- Patient detail & workflow pages: 6 hours
-- Styling & UX improvements: 4 hours
-- Testing & minor fixes: 4 hours
-
-Total: ~1.5 - 3 days to reach an MVP with the current codebase and features. A production-ready application with auth, tests, API, and robust validation would take longer (~2-3 weeks).
