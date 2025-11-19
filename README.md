@@ -134,6 +134,10 @@ php -S localhost:8000 -t public
 
 Open http://localhost:8000 in your browser.
 
+# Default Login Credentials
+username - `admin`
+password - `adminpass`
+
 ## New Pages & Workflows
 
 - `public/index.php` — patient list dashboard
