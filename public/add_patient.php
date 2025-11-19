@@ -131,7 +131,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </form>
     </div>
 
-    <div class="footer">Made for demo purposes</div>
+    
 </div>
 </body>
 </html>
